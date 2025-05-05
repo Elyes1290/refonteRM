@@ -1,0 +1,717 @@
+.accueil {
+  display: flex;
+  flex-direction: column; /* Empile les blocs verticalement */
+  align-items: center;
+  justify-content: center;
+  gap: 5rem; /* Espacement entre les deux blocs */
+  height: auto;
+  background-image: url("/images/fond2.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 8.4375rem; /* Hauteur du menu */
+  padding-bottom: 7.6875rem; /* Hauteur du footer */
+}
+
+.contenu {
+  width: 95%;
+  margin-top: 5rem;
+  background-color: white;
+  border-radius: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  padding: 2rem;
+  color: #204296;
+}
+
+.contenu h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.premier-contenu {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.contenu-texte {
+  width: 90%;
+  text-align: justify; /* Justification du texte */
+  font-size: 1.7rem; /* 20px → 1.25rem */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.contenu-titre {
+  width: 49.9375rem; /* 799px → 49.9375rem */
+  height: 6.5rem; /* 104px → 6.5rem */
+  text-align: center;
+  font-size: 2.25rem; /* 36px → 2.25rem */
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.contenu-bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.1875rem; /* 99px → 6.1875rem */
+  height: 2.3125rem; /* 37px → 2.3125rem */
+  background-color: #204296;
+  color: white;
+  font-size: 1.25rem; /* 20px → 1.25rem */
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none; /* Enlever le soulignement du lien */
+  border-radius: 0.4375rem; /* 7px → 0.4375rem */
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 5rem; /* Ajuste la distance du bouton par rapport au texte */
+}
+
+.contenu-bouton:hover {
+  background-color: #183b7a; /* Légère variation au survol */
+}
+
+/* Ajout d'un max-width et adaptation du texte */
+.deroulant-texte {
+  text-align: justify;
+  color: white;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1rem; /* Espacement entre les textes */
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.troisieme-contenu {
+  align-items: center;
+}
+
+.autorisations-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.autorisation-box {
+  width: 350px; /* Taille de base plus grande */
+  height: 230px; /* Taille de base plus grande */
+  background-color: #204296;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px; /* Texte plus grand */
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ne s’applique qu’aux périphériques dont le pointeur peut survoler */
+@media (hover: hover) and (pointer: fine) {
+  /* Effets de hover pour .partenaire-box */
+
+  .partenaire-box:hover .partenaire-image {
+    transform: scale(1.1);
+  }
+
+  /* Effets de hover pour .equipe-box */
+  .equipe-box:hover {
+    width: 37.5rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.download-link {
+  margin-top: 15px;
+  color: #ffd700; /* Jaune pour ressortir sur le bleu */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.personalisableRow {
+  margin-top: -1rem;
+  font-size: 1rem;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.quatrieme-contenu {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Conteneur pour aligner les partenaires en ligne */
+.partenaires-container {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 5rem; /* Espacement entre les partenaires */
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* Permet le passage à la ligne si l'écran est trop petit */
+}
+
+/* Style des blocs partenaires */
+.partenaire-box {
+  width: 400px;
+  height: 550px;
+  background-color: #204296;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Agrandissement des images */
+.partenaire-image {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Titre des partenaires */
+.partenaire-titre {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Conteneur général "Notre équipe" */
+.cinquieme-contenu {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Conteneur flex pour les membres de l'équipe */
+.equipe-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Cartes membres de l'équipe */
+.equipe-box {
+  width: 31.25rem; /* 500px → rem */
+  background-color: #204296;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem; /* Texte normal */
+  font-weight: bold;
+  border-radius: 0.9375rem; /* 15px → rem */
+  padding: 1.5rem; /* 24px → rem */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Nom du membre */
+.equipe-titre {
+  font-size: 1.375rem; /* 22px → rem */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Rôle du membre */
+.equipe-role {
+  font-size: 1.125rem; /* 18px → rem */
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Texte du membre */
+.equipe-texte {
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6; /* Ajoute un bon espacement vertical entre les lignes */
+}
+
+/* Bouton Contact */
+.equipe-bouton {
+  background-color: white;
+  color: #1a2b50;
+  padding: 0.625rem 0.9375rem; /* 10px & 15px → rem */
+  text-decoration: none;
+  border-radius: 0.625rem; /* 10px → rem */
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.equipe-bouton:hover {
+  background-color: #ffd700;
+  color: #1a2b50;
+}
+
+.sixieme-contenu {
+  text-align: justify; /* Justification du texte */
+  font-size: 1.7rem; /* 20px → 1.25rem */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.mission-list {
+  list-style-type: disc; /* Définit un point noir comme puce */
+  padding-left: 20px; /* Décale la puce pour l'alignement */
+  margin-top: 10px; /* Espacement avant la liste */
+}
+
+.mission-list li {
+  font-weight: 400; /* Poids de la police */
+  line-height: 1.5; /* Espacement entre les lignes */
+}
+.bouton-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement si nécessaire */
+  width: 100%; /* Prend toute la largeur disponible */
+}
+
+.btn-decouvrir {
+  width: 20rem;
+  background-color: white;
+  color: #204296; /* Bleu pour le texte et la bordure */
+  border: 2px solid #204296; /* Bordure bleue */
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 25px; /* Bouton arrondi */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-decouvrir:hover {
+  background-color: #204296; /* Fond bleu au survol */
+  color: white; /* Texte blanc au survol */
+  transform: scale(1.05); /* Effet d'agrandissement */
+}
+
+.septieme-contenu {
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 15rem;
+}
+
+.septieme-contenu p {
+  margin: 0.1rem 0; /* Réduit l'espace entre les paragraphes */
+}
+
+.septieme-contenu p:first-of-type {
+  margin-bottom: 0.1rem; /* Garde un peu plus d'espace sous l'e-mail */
+}
+.map-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  border: 0;
+  border-radius: 10px;
+  height: 30rem;
+  width: 30rem;
+}
+
+.contact-form {
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #204296;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Permet de répartir les champs sur 2 colonnes */
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+/* Objet et Message prennent toute la largeur */
+.full-width {
+  width: 100%;
+}
+
+.btn-envoyer {
+  background-color: #204296;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-envoyer:hover {
+  background-color: #163373;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  background-color: #204296;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1001; /* au-dessus du menu */
+}
+
+.scroll-to-top:hover {
+  background-color: #163373;
+  transform: scale(1.1);
+}
+
+/* ===== Version macbook ===== */
+
+@media only screen and (max-width: 1700px) {
+  /* Section d’accueil */
+  .accueil {
+    padding-top: 4rem; /* au lieu de 8.4375rem */
+    padding-bottom: 4rem; /* au lieu de 7.6875rem */
+    gap: 3rem; /* au lieu de 5rem */
+  }
+
+  /* Contenu principal plus visible */
+  .contenu {
+    width: 90%; /* au lieu de 95% */
+    margin-top: 3rem; /* au lieu de 5rem */
+    padding: 1.5rem; /* au lieu de 2rem */
+    font-size: 1rem; /* contenu texte plus petit */
+  }
+
+  /* Exemple d’unité fluide pour un titre */
+  .contenu-titre {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .contenu-texte {
+    font-size: 1rem;
+  }
+
+  /* Conteneur des cartes : moins de gap pour gagner de la place */
+  .equipe-container {
+    flex-direction: column; /* Empile les cartes verticalement */
+    align-items: stretch; /* Force chaque carte à prendre toute la largeur */
+    gap: 2rem; /* Espacement entre chaque carte */
+  }
+
+  .equipe-box {
+    flex: 0 0 100%; /* Flex-basis 100%, désactive le shrink/grow */
+    max-width: 100%; /* Empêche de dépasser la largeur */
+    width: 100%; /* S’assure de la largeur pleine */
+    margin-bottom: 2rem; /* Marge sous chaque carte */
+  }
+
+  /* Ajustement du titre et du rôle dans chaque carte */
+  .equipe-titre {
+    font-size: 1.2rem; /* de 1.375rem à 1.2rem */
+  }
+  .equipe-role {
+    font-size: 1rem; /* de 1.125rem à 1rem */
+  }
+
+  /* Réduit l’espacement entre les blocs */
+  .partenaires-container {
+    gap: 1rem; /* au lieu de 5rem */
+    justify-content: space-around;
+  }
+
+  /* Cartes partenaires plus compactes pour tenir 3 sur la ligne */
+  .partenaire-box {
+    flex: 0 1 28%; /* chaque bloc fait max 28% */
+    max-width: 28%; /* verrouille à 28% pour éviter le wrap */
+    padding: 1rem; /* moins de marge interne */
+    font-size: 0.9rem; /* texte légèrement plus petit */
+    height: auto; /* hauteur adaptative */
+  }
+
+  /* Image elle-même plus petite pour gagner de la place */
+  .partenaire-image {
+    width: 80%; /* remplace le 250px fixe */
+    max-width: 200px; /* limite la taille max */
+    height: auto; /* garde les proportions */
+  }
+
+  /* Titre des partenaires ajusté */
+  .partenaire-titre {
+    font-size: 1.2rem; /* de 22px → 1.2rem */
+  }
+  .second-contenu {
+    display: flex; /* active Flexbox :contentReference[oaicite:1]{index=1} */
+    flex-wrap: wrap; /* permet à l’image et au texte de se réorganiser :contentReference[oaicite:2]{index=2} */
+    align-items: flex-start; /* aligne les items en début de ligne :contentReference[oaicite:3]{index=3} */
+    justify-content: center; /* centre horizontalement lorsque possible */
+    padding: 1rem; /* optionnel : retrécit les marges intérieures */
+  }
+
+  /* ================= Image ================= */
+  .second-contenu .deroulant-image {
+    flex: 0 0 40%; /* width à 40% pour tenir côte à côte :contentReference[oaicite:4]{index=4} */
+    max-width: 20%; /* verrouille la largeur max */
+    height: auto; /* conserve le ratio */
+    margin: 0 auto 1rem; /* centre et ajoute un espace sous l’image */
+  }
+
+  /* ================= Texte ================= */
+  .second-contenu .deroulant-texte {
+    max-width: 55%; /* limite la largeur max */
+    margin: 0.5rem auto; /* centrage horizontal et léger espacement vertical */
+    font-size: 1rem; /* ajuste la taille pour MacBook */
+    line-height: 1.4; /* pour plus de lisibilité */
+    text-align: left; /* aligne le texte à gauche */
+  }
+
+  /* Neutralise tous les hover pour ces classes */
+
+  .equipe-box:hover {
+    /* Remettez ici vos propriétés par défaut, sans transition ni taille modifiée */
+    transform: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: inherit !important;
+  }
+  .partenaire-box:hover,
+  .autorisation-box:hover {
+    /* Remettez ici vos propriétés par défaut, sans transition ni taille modifiée */
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ===== VERSION MOBILE ===== */
+@media (max-width: 768px) {
+  .deroulant-content.open {
+    max-height: none;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .accueil {
+    gap: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-size: cover; /* ou '100% auto' si tu veux contrôler la largeur */
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .contenu {
+    width: 90%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contenu-titre {
+    width: 100%;
+    height: auto;
+    font-size: 1.8rem;
+  }
+
+  .contenu-texte {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .contenu-bouton {
+    width: 100%;
+    font-size: 1.1rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Section 1 - Premier contenu */
+  .premier-contenu {
+    padding: 1rem;
+  }
+
+  .premier-contenu .contenu-texte {
+    font-size: 1.1rem; /* réduit depuis 1.7rem */
+    line-height: 1.6;
+  }
+
+  /* Section 3 - Troisième contenu */
+  .sixieme-contenu {
+    padding: 1rem;
+    font-size: 1.1rem; /* si besoin globalement */
+  }
+
+  .sixieme-contenu .contenu-texte {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .partenaires-container,
+  .equipe-container {
+    flex-direction: column; /* Empile verticalement */
+    align-items: stretch; /* Etire les enfants horizontalement */ /* :contentReference[oaicite:0]{index=0} */
+    gap: 2rem; /* Garde un espacement suffisant */
+  }
+
+  .partenaire-box,
+  .equipe-box {
+    flex: 0 0 100%; /* Désactive le flex-basis précédent de 28% :contentReference[oaicite:1]{index=1} */
+    max-width: 100%; /* Assure qu’ils ne dépassent pas */
+    width: 100%; /* Full width */
+    padding: 1.5rem; /* Reprend votre padding mobile existant */
+    box-sizing: border-box; /* Prend en compte le padding dans la largeur */
+  }
+  .partenaire-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
+
+  .autorisation-box {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .autorisations-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .btn-decouvrir {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* Section 7 : Contact */
+  .septieme-contenu {
+    text-align: center; /* Centrage du texte */
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 8rem; /* Réduit l'espace */
+  }
+
+  .septieme-contenu h2,
+  .septieme-contenu h3 {
+    font-size: 1.5rem; /* Réduction du titre */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .btn-envoyer {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .scroll-to-top {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.5rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+  .deroulant-header {
+    font-size: 1rem; /* Réduction de la taille */
+    padding: 0.5rem 1rem; /* Moins d’espace autour */
+    white-space: nowrap; /* Pas de retour à la ligne */
+    overflow: hidden; /* Cache le débordement */
+    text-overflow: ellipsis; /* "..." si trop long */
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  .deroulant-texte {
+    font-size: 1rem; /* Taille plus adaptée */
+    margin-left: 1rem; /* Moins de marge latérale */
+    margin-right: 1rem;
+    line-height: 1.6; /* Bonne lisibilité */
+  }
+}

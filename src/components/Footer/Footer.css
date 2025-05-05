@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  height: 7.6875rem; /* 123px */
+  background-color: #204296;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Assure que le footer est au-dessus du contenu */
+}
+
+.footer-text {
+  width: 90%;
+  max-width: 90rem;
+  text-align: center;
+  color: white;
+  font-size: 1.25rem; /* 20px */
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+/* Cible les écrans ≤ 1280px (MacBook 13.3") */
+@media only screen and (max-width: 1700px) {
+  .footer {
+    height: 5.5rem; /* réduit de 7.6875rem */
+    padding: 0 1.5rem; /* moins d’espace latéral */
+  }
+  .footer-text {
+    font-size: 1rem; /* texte plus léger */
+    line-height: 1.4; /* meilleur confort de lecture */
+  }
+}
