@@ -8,7 +8,7 @@ const Menu = () => {
         {/* Logo + texte à gauche */}
         <div className="menu-left">
           <img className="menu-logo-left" src="/images/logo.png" alt="Logo" />
-          <div className="menu-title">Rising Management</div>
+          <div className="menu-title">RM Sports Agency</div>
         </div>
 
         {/* Logo central qui mène à l'accueil */}

@@ -443,7 +443,7 @@
 
 /* ===== Version macbook ===== */
 
-@media only screen and (max-width: 1700px) {
+@media only screen and (min-width: 769px) and (max-width: 1700px) {
   /* Section d’accueil */
   .accueil {
     padding-top: 4rem; /* au lieu de 8.4375rem */
