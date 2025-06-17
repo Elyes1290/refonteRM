@@ -129,13 +129,16 @@
 /* Style pour mobile */
 @media (max-width: 768px) {
   .language-selector {
-    gap: 6px;
+    gap: 4px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .lang-btn {
-    font-size: 16px;
-    min-width: 36px;
-    height: 32px;
-    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 32px;
+    height: 28px;
+    padding: 2px 6px;
+    font-weight: 700;
   }
 }
