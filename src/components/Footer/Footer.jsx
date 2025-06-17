@@ -1,7 +1,9 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-text">
@@ -9,7 +11,7 @@ const Footer = () => {
         <br />
         Sports Agency (SNC)
         <br />
-        ©2020 All rights reserved
+        {t("footer.all_rights")}
       </div>
     </footer>
   );

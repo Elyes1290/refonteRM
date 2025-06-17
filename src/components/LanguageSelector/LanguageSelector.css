@@ -1,0 +1,141 @@
+.language-selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 36px;
+  backdrop-filter: blur(5px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.lang-btn-fr::before {
+  background: linear-gradient(to right, #002395, #ffffff, #ed2939);
+  opacity: 0.6;
+}
+
+.lang-btn-en::before {
+  background: linear-gradient(
+      90deg,
+      transparent 35%,
+      #c8102e 35%,
+      #c8102e 65%,
+      transparent 65%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 30%,
+      #ffffff 30%,
+      #ffffff 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 35%,
+      #c8102e 35%,
+      #c8102e 65%,
+      transparent 65%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 30%,
+      #ffffff 30%,
+      #ffffff 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 44%,
+      #c8102e 44%,
+      #c8102e 56%,
+      transparent 56%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      #ffffff 40%,
+      #ffffff 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 44%,
+      #c8102e 44%,
+      #c8102e 56%,
+      transparent 56%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 40%,
+      #ffffff 40%,
+      #ffffff 60%,
+      transparent 60%
+    ),
+    #012169;
+  opacity: 0.7;
+}
+
+.lang-btn:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.lang-btn.active {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.4);
+}
+
+.lang-btn:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* Style pour mobile */
+@media (max-width: 768px) {
+  .language-selector {
+    gap: 6px;
+  }
+
+  .lang-btn {
+    font-size: 16px;
+    min-width: 36px;
+    height: 32px;
+    padding: 4px 8px;
+  }
+}

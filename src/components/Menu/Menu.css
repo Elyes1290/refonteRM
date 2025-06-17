@@ -58,6 +58,13 @@
   word-wrap: break-word;
 }
 
+.menu-right {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+
 .menu-link {
   color: white;
   font-family: "Inter", sans-serif;
@@ -120,5 +127,11 @@
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
+  }
+
+  /* sélecteur de langue en troisième position */
+  .menu-right {
+    order: 3 !important;
+    margin-top: 0.5rem;
   }
 }
